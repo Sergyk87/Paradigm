@@ -24,6 +24,6 @@ def pearson_correlation(array_x, array_y):
     return r_xy
 
 
-array_X = [2, 4, 6]
-array_Y = [4, 8, 24]
+array_X = [1, 2, 3]
+array_Y = [4, 5, 6]
 print(pearson_correlation(array_X, array_Y))
