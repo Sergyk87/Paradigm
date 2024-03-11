@@ -1,0 +1,32 @@
+INFO:__main__:--------------- NEW QUERY START ---------------
+INFO:__main__:DirItem(name='.pytest_cache', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15')
+INFO:__main__:DirItem(name='hw15_task6', ext='.log', is_dir=False, parent='C:\\python_projects\\Python\\HW15')
+INFO:__main__:DirItem(name='Task6', ext='.py', is_dir=False, parent='C:\\python_projects\\Python\\HW15')
+INFO:__main__:DirItem(name='test_task6', ext='.py', is_dir=False, parent='C:\\python_projects\\Python\\HW15')
+INFO:__main__:DirItem(name='__pycache__', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15')
+INFO:__main__:------------------ QUERY END ------------------
+INFO:Task6:--------------- NEW QUERY START ---------------
+INFO:Task6:DirItem(name='.pytest_cache', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15')
+INFO:Task6:DirItem(name='hw15_task6', ext='.log', is_dir=False, parent='C:\\python_projects\\Python\\HW15')
+INFO:Task6:DirItem(name='Task6', ext='.py', is_dir=False, parent='C:\\python_projects\\Python\\HW15')
+INFO:Task6:DirItem(name='test_task6', ext='.py', is_dir=False, parent='C:\\python_projects\\Python\\HW15')
+INFO:Task6:DirItem(name='__pycache__', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15')
+INFO:Task6:------------------ QUERY END ------------------
+INFO:Task6:--------------- NEW QUERY START ---------------
+INFO:Task6:DirItem(name='dir1', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='dir2', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='file1', ext='.f1', is_dir=False, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='file2', ext='.f2', is_dir=False, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:------------------ QUERY END ------------------
+INFO:Task6:--------------- NEW QUERY START ---------------
+INFO:Task6:DirItem(name='dir1', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='dir2', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='file1', ext='.f1', is_dir=False, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='file2', ext='.f2', is_dir=False, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:------------------ QUERY END ------------------
+INFO:Task6:--------------- NEW QUERY START ---------------
+INFO:Task6:DirItem(name='dir1', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='dir2', ext=None, is_dir=True, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='file1', ext='.f1', is_dir=False, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:DirItem(name='file2', ext='.f2', is_dir=False, parent='C:\\python_projects\\Python\\HW15\\test')
+INFO:Task6:------------------ QUERY END ------------------
