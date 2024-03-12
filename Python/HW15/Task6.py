@@ -58,4 +58,4 @@ if __name__ == '__main__':
     path = rf'{cl_parser()}'
     tuples = get_dir_contents(path)
 
-    # pytest.main(['-v'])
+    pytest.main(['-v'])
