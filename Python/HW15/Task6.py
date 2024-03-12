@@ -12,7 +12,6 @@ from collections import namedtuple
 from typing import Callable
 
 
-
 def log_to_file(data: str, file: str = 'hw15_task6.log') -> None:
     logging.basicConfig(filename=file, encoding='UTF-8', level=logging.NOTSET)
     logger = logging.getLogger(__name__)
@@ -21,9 +20,8 @@ def log_to_file(data: str, file: str = 'hw15_task6.log') -> None:
 
 def wrap_query(func) -> Callable:
     def wrapper(*args, **kwargs):
-        log_to_file(f"{'-' * 15} NEW QUERY START {'-' * 15}")
         res = func(*args, **kwargs)
-        log_to_file(f"{'-' * 18} QUERY END {'-' * 18}")
+
         return res
 
     return wrapper
@@ -58,7 +56,6 @@ def cl_parser() -> str:
 
 if __name__ == '__main__':
     path = rf'{cl_parser()}'
-    # tuples хранит список объектов 'DirItem' (см. *.log файл)
     tuples = get_dir_contents(path)
 
-    pytest.main(['-v'])
+    # pytest.main(['-v'])
