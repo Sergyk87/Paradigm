@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Title</title>
+    <!--    <h1>Моя первая HTML страница</h1>-->
+    <!--<p class="text">Привет, мир!</p>-->
+</head>
+<body>
+<table>
+    <tr>
+        <td>{{firstname}}</td>
+        <td>{{lastname}}</td>
+        <td>{{age}}</td>
+        <td>{{rating}}</td>
+    </tr>
+    {% for student in students_list %}
+    <tr>
+        <td>{{student.firstname}}</td>
+        <td>{{student.lastname}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.rating}}</td>
+    </tr>
+    {%endfor%}
+
+</table>
+</body>
+</html>
