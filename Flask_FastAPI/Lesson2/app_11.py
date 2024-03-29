@@ -3,25 +3,30 @@ from flask import Flask, redirect, url_for
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return 'Добро пожаловать на главную страницу!'
+    return "Добро пожаловать на главную страницу!"
 
-@app.route('/redirect/')
+
+@app.route("/redirect/")
 def redirect_to_index():
-    return redirect(url_for('index'))
+    return redirect(url_for("index"))
 
-@app.route('/external/')
+
+@app.route("/external/")
 def external_redirect():
-    return redirect('https://www.python.org/')
+    return redirect("https://www.python.org/")
 
-@app.route('/hello/<name>/')
+
+@app.route("/hello/<name>/")
 def hello(name):
-    return f'Привет, {name}!'
+    return f"Привет, {name}!"
 
-@app.route('/redirect/<name>/')
+
+@app.route("/redirect/<name>/")
 def redirect_to_hello(name):
-    return redirect(url_for('hello', name=name))
+    return redirect(url_for("hello", name=name))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)

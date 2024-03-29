@@ -9,23 +9,28 @@ import requests
 from multiprocessing import Process, Pool
 import time
 
-urls = ['https://www.google.ru/',
-        'https://gb.ru/',
-        'https://ya.ru/',
-        'https://www.python.org/',
-        'https://habr.com/ru/all/',
-        'https://ru.wikipedia.org/',
-        'https://ru.hexlet.io/',
-        'https://megaseller.shop/',
-        'https://linux.org',
-        'https://metanit.com/',
-        ]
+urls = [
+    "https://www.google.ru/",
+    "https://gb.ru/",
+    "https://ya.ru/",
+    "https://www.python.org/",
+    "https://habr.com/ru/all/",
+    "https://ru.wikipedia.org/",
+    "https://ru.hexlet.io/",
+    "https://megaseller.shop/",
+    "https://linux.org",
+    "https://metanit.com/",
+]
 
 
 def download(url):
     response = requests.get(url)
-    filename = 'multiprocessing_' + url.replace('https://', '').replace('.', '_').replace('/', '') + '.html'
-    with open(filename, "w", encoding='utf-8') as f:
+    filename = (
+        "multiprocessing_"
+        + url.replace("https://", "").replace(".", "_").replace("/", "")
+        + ".html"
+    )
+    with open(filename, "w", encoding="utf-8") as f:
         f.write(response.text)
     print(f"Downloaded {url} in {time.time() - start_time:.2f}seconds")
 
@@ -33,7 +38,7 @@ def download(url):
 processes = []
 start_time = time.time()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for url in urls:
         process = Process(target=download, args=(url,))
         processes.append(process)

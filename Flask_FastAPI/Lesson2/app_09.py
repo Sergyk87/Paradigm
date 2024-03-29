@@ -3,11 +3,13 @@ from Lesson2.db import get_blog
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return '<h1>Hello world!</h1>'
 
-@app.route('/blog/<int:id>')
+@app.route("/")
+def index():
+    return "<h1>Hello world!</h1>"
+
+
+@app.route("/blog/<int:id>")
 def get_block_by_id(id):
     ...
     # делаем запрос в БД для поиска статьи по id
@@ -17,14 +19,16 @@ def get_block_by_id(id):
     ...
     # возвращаем найденную в БД статью
 
+
 @app.errorhandler(404)
 def page_not_found(e):
     app.logger.warning(e)
     context = {
-        'title': 'Страница не найдена',
-        'url': request.base_url,
+        "title": "Страница не найдена",
+        "url": request.base_url,
     }
-    return render_template('404.html', **context), 404
+    return render_template("404.html", **context), 404
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)

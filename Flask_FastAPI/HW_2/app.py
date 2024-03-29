@@ -18,38 +18,38 @@ from flask import Flask, render_template, make_response, redirect, request
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template("index.html")
 
 
-@app.route('/welcome/', methods=['POST'])
+@app.route("/welcome/", methods=["POST"])
 def welcome():
-    name = request.form.get('name')
-    email = request.form.get('email')
+    name = request.form.get("name")
+    email = request.form.get("email")
 
-    response = make_response(redirect('/welcome'))
-    response.set_cookie('user_name', name)
-    response.set_cookie('user_email', email)
+    response = make_response(redirect("/welcome"))
+    response.set_cookie("user_name", name)
+    response.set_cookie("user_email", email)
 
     return response
 
 
-@app.route('/welcome')
+@app.route("/welcome")
 def greet():
-    user_name = request.cookies.get('user_name')
+    user_name = request.cookies.get("user_name")
     if user_name:
-        return render_template('welcome.html', name=user_name)
-    return redirect('/')
+        return render_template("welcome.html", name=user_name)
+    return redirect("/")
 
 
-@app.route('/logout/')
+@app.route("/logout/")
 def logout():
-    response = make_response(redirect('/'))
-    response.delete_cookie('user_name')
-    response.delete_cookie('user_email')
+    response = make_response(redirect("/"))
+    response.delete_cookie("user_name")
+    response.delete_cookie("user_email")
     return response
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

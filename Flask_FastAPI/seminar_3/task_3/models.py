@@ -4,7 +4,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase_user.db'
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydatabase_user.db"
 db = SQLAlchemy(app)
 
 
@@ -15,7 +15,4 @@ class Users(db.Model):
     password = db.Column(db.String(80), nullable=False)
 
     def __repr__(self):
-        return f'{self.username}, {self.email}, {self.password}'
-
-
-
+        return f"{self.username}, {self.email}, {self.password}"

@@ -7,29 +7,30 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def hello_world():
-    return 'Hello World!'
+    return "Hello World!"
 
 
 # Добавьте две дополнительные страницы в ваше вебприложение:
 # ○ страницу "about"
 # ○ страницу "contact"
 #
-@app.route('/about/')
+@app.route("/about/")
 def about():
-    return 'about'
+    return "about"
 
 
-@app.route('/contact/')
+@app.route("/contact/")
 def contact():
-    return 'contact'
+    return "contact"
 
 
 # Написать функцию, которая будет принимать на вход два
 # числа и выводить на экран их сумму.
 
-@app.route('/<int:num_1>/<int:num_2>')
+
+@app.route("/<int:num_1>/<int:num_2>")
 def sum_nums(num_1: int, num_2: int) -> str:
     return str(num_1 + num_2)
 
@@ -37,7 +38,8 @@ def sum_nums(num_1: int, num_2: int) -> str:
 # Написать функцию, которая будет принимать на вход строку и
 # выводить на экран ее длину.
 
-@app.route('/string/<string:name>')
+
+@app.route("/string/<string:name>")
 def text(name: str):
     return str(len(name))
 
@@ -46,9 +48,10 @@ def text(name: str):
 # страницу с заголовком "Моя первая HTML страница" и
 # абзацем "Привет, мир!".
 
-@app.route('/world')
+
+@app.route("/world")
 def world():
-    return render_template('index.html')
+    return render_template("index.html")
 
 
 # Написать функцию, которая будет выводить на экран HTML
@@ -59,36 +62,22 @@ def world():
 # контекст.
 
 
-@app.route('/students/')
+@app.route("/students/")
 def students():
     head = {
-        'firstname': 'Имя',
-        'lastname': 'Фамилия',
-        'age': 'Возраст',
-        'rating': 'Средний балл'
+        "firstname": "Имя",
+        "lastname": "Фамилия",
+        "age": "Возраст",
+        "rating": "Средний балл",
     }
 
     students_list = [
-        {
-            'firstname': 'Иван',
-            'lastname': 'Иванов',
-            'age': 18,
-            'rating': 4
-        },
-        {
-            'firstname': 'Петр',
-            'lastname': 'Петров',
-            'age': 19,
-            'rating': 5
-        },
-        {
-            'firstname': 'Сергей',
-            'lastname': 'Сергеев',
-            'age': 17,
-            'rating': 6
-        }]
+        {"firstname": "Иван", "lastname": "Иванов", "age": 18, "rating": 4},
+        {"firstname": "Петр", "lastname": "Петров", "age": 19, "rating": 5},
+        {"firstname": "Сергей", "lastname": "Сергеев", "age": 17, "rating": 6},
+    ]
 
-    return render_template('index.html', **head, students_list=students_list)
+    return render_template("index.html", **head, students_list=students_list)
 
 
 # Написать функцию, которая будет выводить на экран HTML
@@ -98,26 +87,29 @@ def students():
 # Данные о новостях должны быть переданы в шаблон через
 # контекст.
 
-@app.route('/news/')
+
+@app.route("/news/")
 def news():
     news_block = [
         {
-            'title': 'новость_1',
-            'description': 'описание_1',
-            'create_at': datetime.now().strftime('%H:%M - %m.%d.%Y года'),
+            "title": "новость_1",
+            "description": "описание_1",
+            "create_at": datetime.now().strftime("%H:%M - %m.%d.%Y года"),
         },
         {
-            'title': 'новость_2',
-            'description': 'описание_2',
-            'create_at': datetime.now().strftime('%H:%M - %m.%d.%Y года'),
+            "title": "новость_2",
+            "description": "описание_2",
+            "create_at": datetime.now().strftime("%H:%M - %m.%d.%Y года"),
         },
         {
-            'title': 'новость_3',
-            'description': 'описание_3',
-            'create_at': datetime.now().strftime('%H:%M - %m.%d.%Y года'),
-        }]
+            "title": "новость_3",
+            "description": "описание_3",
+            "create_at": datetime.now().strftime("%H:%M - %m.%d.%Y года"),
+        },
+    ]
 
-    return render_template('news.html', news_block=news_block)
+    return render_template("news.html", news_block=news_block)
+
 
 # Создать базовый шаблон для всего сайта, содержащий
 # общие элементы дизайна (шапка, меню, подвал), и
@@ -126,6 +118,5 @@ def news():
 # используя базовый шаблон.
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

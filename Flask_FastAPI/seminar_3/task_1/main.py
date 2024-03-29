@@ -14,36 +14,37 @@ from models import db, Student, Faculty
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydatabase.db"
 db.init_app(app)
 
 
 @app.cli.command("init-db")
 def init_db():
     db.create_all()
-    print('OK')
+    print("OK")
 
 
 @app.cli.command("add-student")
 def add_data():
     for i in range(1, 3):
-        faculty = Faculty(name=f'faculty_{i}')
+        faculty = Faculty(name=f"faculty_{i}")
         db.session.add(faculty)
 
     for i in range(0, 10):
         student = Student(
-            firstname=f'firstbane{i}',
-            lastname=f'lastname{i}',
-            gender=random.choice(['муж', 'жен']),
+            firstname=f"firstbane{i}",
+            lastname=f"lastname{i}",
+            gender=random.choice(["муж", "жен"]),
             group=random.randint(1, 5),
-            id_faculty=random.randint(1, 3)
+            id_faculty=random.randint(1, 3),
         )
         db.session.add(student)
     db.session.commit()
-    print('Данные добавлены')
+    print("Данные добавлены")
 
-@app.get('/')
+
+@app.get("/")
 def get_student():
     students = Student.query.all()
-    context = {'students': students}
-    return render_template('students.html', **context)
+    context = {"students": students}
+    return render_template("students.html", **context)

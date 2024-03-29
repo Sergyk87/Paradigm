@@ -7,14 +7,16 @@ import asyncio
 import os
 from pathlib import Path
 
-PATH = 'test_1'
+PATH = "test_1"
 count = 0
+
 
 async def get_amount_worlds(file_path) -> None:
     global count
-    with open(file_path, encoding='utf-8') as f:
+    with open(file_path, encoding="utf-8") as f:
         count = len(f.read().split())
-    print(f'Значение счетчика: {count :_}')
+    print(f"Значение счетчика: {count :_}")
+
 
 async def main():
     tasks = []
@@ -24,7 +26,8 @@ async def main():
             tasks.append(asyncio.create_task(get_amount_worlds(file_path)))
     await asyncio.gather(*tasks)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     asyncio.run(main())
 
-print(f'Финальное значение счетчика: {count}')
+print(f"Финальное значение счетчика: {count}")
