@@ -1,0 +1,14 @@
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2165
+Not Found: /about_my
+"GET /about_my HTTP/1.1" 404 2207
+C:\python_projects\FrameworkDjango\HW\myproject\hwapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hwapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2165
+"GET /hw HTTP/1.1" 301 0
+"GET /hw/ HTTP/1.1" 200 12
+"GET /hw/about_my HTTP/1.1" 200 46
