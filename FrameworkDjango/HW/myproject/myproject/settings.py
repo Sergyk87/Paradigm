@@ -42,7 +42,7 @@ LOGGING = {
             "handlers": ["console", "file"],
             "level": "INFO",
         },
-        "gameapp": {
+        "hwapp": {
             "handlers": ["console"],
             "level": "DEBUG",
             "propagate": True,
