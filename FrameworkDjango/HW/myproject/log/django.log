@@ -1,14 +1,31 @@
 Watching for file changes with StatReloader
-"GET / HTTP/1.1" 200 233
-"GET /about_my HTTP/1.1" 200 192
-"GET / HTTP/1.1" 200 233
-"GET /about_my HTTP/1.1" 200 192
-"GET / HTTP/1.1" 200 233
-"GET /about_my HTTP/1.1" 200 192
-"GET / HTTP/1.1" 200 233
-C:\python_projects\FrameworkDjango\HW\myproject\hwapp\views.py changed, reloading.
-Watching for file changes with StatReloader
-"GET /about_my HTTP/1.1" 200 192
+��������� �������� hwapp.views: index
 "GET / HTTP/1.1" 200 232
+��������� �������� hwapp.views: about_my
 "GET /about_my HTTP/1.1" 200 192
+��������� �������� hwapp.views: index
+"GET / HTTP/1.1" 200 232
+C:\python_projects\FrameworkDjango\HW\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Посещение страницы hwapp.views: index
+"GET / HTTP/1.1" 200 232
+Посещение страницы hwapp.views: about_my
+"GET /about_my HTTP/1.1" 200 192
+Посещение страницы hwapp.views: index
+"GET / HTTP/1.1" 200 232
+Посещение страницы hwapp.views: about_my
+"GET /about_my HTTP/1.1" 200 192
+Посещение страницы hwapp.views: index
+"GET / HTTP/1.1" 200 232
+Посещение страницы hwapp.views: about_my
+"GET /about_my HTTP/1.1" 200 192
+Посещение страницы hwapp.views: index
+"GET / HTTP/1.1" 200 232
+Not Found: /hw/
+"GET /hw/ HTTP/1.1" 404 2422
+Not Found: /hw/
+"GET /hw/ HTTP/1.1" 404 2422
+Посещение страницы hwapp.views: about_my
+"GET /about_my HTTP/1.1" 200 192
+Посещение страницы hwapp.views: index
 "GET / HTTP/1.1" 200 232

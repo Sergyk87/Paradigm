@@ -31,5 +31,5 @@ def about_my(request):
         <h2><a href='../'>На главную</a></h2>
     </div>
     """
-    logger.info(f"Посещение страницы {__name__}: about")
+    logger.info(f"Посещение страницы {__name__}: about_my")
     return HttpResponse(html)
