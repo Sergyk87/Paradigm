@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-&p3v_s$19dqea($a_(*#w87rd8c-vhragl_8mz8u8-agok53*@"
+SECRET_KEY = "django-insecure-lzbl0zy8e$t#ghlnwl!4iikp%k7&fp42$pcr(z!xt$j7v0ig1)"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -29,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
 ]
+
 
 # Application definition
 
@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "hwapp",
-    "hw_2_app",
+    "myapp",
+    "myapp2",
 ]
 
 MIDDLEWARE = [
@@ -126,17 +126,28 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
+    "formatters": {
+        "simple": {
+            "format": "%(levelname)s %(message)s"
+        },
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {process} {thread} {message}",
+            "style": "{",
+        },
+    },
     "handlers": {
         "console": {
             "class": "logging.StreamHandler",
+            "formatter": "verbose",  # добавлен параметр formatter
         },
         "file": {
             "class": "logging.FileHandler",
-            "filename": "./log/django.log",
-            "encoding": "UTF-8",
+            'filename': './log/django.log',
+            "formatter": "verbose",  # добавлен параметр formatter
         },
     },
     "loggers": {
@@ -144,8 +155,8 @@ LOGGING = {
             "handlers": ["console", "file"],
             "level": "INFO",
         },
-        "hwapp": {
-            "handlers": ["console", "file"],
+        "myapp": {
+            'handlers': ['console', 'file'],
             "level": "DEBUG",
             "propagate": True,
         },

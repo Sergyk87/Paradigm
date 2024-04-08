@@ -29,3 +29,11 @@ Not Found: /hw/
 "GET /about_my HTTP/1.1" 200 192
 Посещение страницы hwapp.views: index
 "GET / HTTP/1.1" 200 232
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2272
+"GET /hw_2 HTTP/1.1" 301 0
+"GET /hw_2/ HTTP/1.1" 200 12
+C:\python_projects\FrameworkDjango\HW\myproject\hw_2_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /hw_2/ HTTP/1.1" 200 11

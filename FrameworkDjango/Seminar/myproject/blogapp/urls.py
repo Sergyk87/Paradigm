@@ -17,9 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from .views import index, kub, orel_reshka, numbers, coin_values
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("hw_1/", include("hwapp.urls")),
-    path("hw_2/", include("hw_2_app.urls")),
+    path("", index, name="index"),
+    path("kub", kub, name="kub"),
+    path("orel_reshka", orel_reshka, name="orel_reshka"),
+    path("numbers", numbers, name="numbers"),
+    path("coin_values", coin_values, name="coin_values"),
 ]
