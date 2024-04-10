@@ -2,3 +2,11 @@ INFO 2024-04-03 23:32:14,839 autoreload 9704 8108 Watching for file changes with
 INFO 2024-04-03 23:33:19,071 autoreload 15080 6064 Watching for file changes with StatReloader
 INFO 2024-04-03 23:33:46,045 autoreload 1368 7616 Watching for file changes with StatReloader
 INFO 2024-04-04 23:19:42,491 autoreload 2656 10376 Watching for file changes with StatReloader
+INFO 2024-04-08 23:08:14,636 autoreload 13316 10224 Watching for file changes with StatReloader
+INFO 2024-04-08 23:09:23,204 autoreload 12200 13636 Watching for file changes with StatReloader
+INFO 2024-04-08 23:14:54,339 autoreload 15048 1916 Watching for file changes with StatReloader
+INFO 2024-04-08 23:19:25,162 autoreload 15048 1916 C:\python_projects\FrameworkDjango\myproject\myapp3\views.py changed, reloading.
+INFO 2024-04-08 23:19:30,309 autoreload 13144 4896 Watching for file changes with StatReloader
+INFO 2024-04-08 23:20:42,860 autoreload 13144 4896 C:\python_projects\FrameworkDjango\myproject\myapp3\views.py changed, reloading.
+INFO 2024-04-08 23:20:47,895 autoreload 15564 4100 Watching for file changes with StatReloader
+INFO 2024-04-08 23:23:21,370 autoreload 12548 1564 Watching for file changes with StatReloader

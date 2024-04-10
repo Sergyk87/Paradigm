@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "gameapp",
     "blogapp",
+    "myprofile",
 ]
 
 MIDDLEWARE = [

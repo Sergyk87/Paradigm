@@ -21,8 +21,8 @@ from .views import index, kub, orel_reshka, numbers, coin_values
 
 urlpatterns = [
     path("", index, name="index"),
-    path("kub", kub, name="kub"),
-    path("orel_reshka", orel_reshka, name="orel_reshka"),
-    path("numbers", numbers, name="numbers"),
-    path("coin_values", coin_values, name="coin_values"),
+    path("kub/<int:count>", kub, name="kub"),
+    path("orel_reshka/<int:count>", orel_reshka, name="orel_reshka"),
+    path("numbers/<int:count>", numbers, name="numbers"),
+    path("coin_values/", coin_values, name="coin_values"),
 ]

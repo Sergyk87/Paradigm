@@ -10,15 +10,20 @@ def index(request):
     return HttpResponse("Hello world!")
 
 
-def orel_reshka(request):
-    site = choice(["Орел", "Решка"])
-    res_orel_reshka = Coin(site=site)
-    res_orel_reshka.save()
-    return HttpResponse(str(site))
+# def orel_reshka(request):
+#     site = choice(["Орел", "Решка"])
+#     res_orel_reshka = Coin(site=site)
+#     res_orel_reshka.save()
+#     return HttpResponse(str(site))
 
 
-def kub(request):
-    return HttpResponse(f"вам выпало: {str(randint(1, 7))}")
+def kub(request, count):
+    lst = []
+    for i in range(count):
+        num = randint(1, 7)
+        lst.append(num)
+    context = {'game_name': 'Кубик', 'value': lst}
+    return render(request, 'gameapp/game.html', context)
 
 
 def numbers(request):
@@ -33,3 +38,12 @@ def coin_values(request):
         print(i)
         lst.append(i.site)
     return HttpResponse(lst)
+
+
+def orel_reshka(request, count=5):
+    lst = []
+    for i in range(count):
+        site = choice(["Орел", "Решка"])
+        lst.append(site)
+    context = {'game_name': 'Орел или решка', 'value': lst}
+    return render(request, 'gameapp/game.html', context)
