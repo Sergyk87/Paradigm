@@ -37,3 +37,72 @@ Not Found: /
 C:\python_projects\FrameworkDjango\HW\myproject\hw_2_app\views.py changed, reloading.
 Watching for file changes with StatReloader
 "GET /hw_2/ HTTP/1.1" 200 11
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2377
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2428
+Not Found: /index
+"GET /index HTTP/1.1" 404 2410
+Not Found: /hw_3_app
+"GET /hw_3_app HTTP/1.1" 404 2419
+"GET /hw_3 HTTP/1.1" 301 0
+"GET /hw_3/ HTTP/1.1" 500 59
+"GET /hw_3/ HTTP/1.1" 500 59
+Not Found: /hw_3/index
+"GET /hw_3/index HTTP/1.1" 404 2486
+"GET /hw_3/ HTTP/1.1" 500 59
+C:\python_projects\FrameworkDjango\HW\myproject\myproject\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /hw_3/
+"GET /hw_3/ HTTP/1.1" 404 2466
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 500 59
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 500 59
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 500 59
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2470
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 200 689
+"GET / HTTP/1.1" 200 436
+"GET / HTTP/1.1" 200 436
+"GET / HTTP/1.1" 200 435
+"GET / HTTP/1.1" 200 435
+Not Found: /game/kub/10
+"GET /game/kub/10 HTTP/1.1" 404 2470
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 200 435
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 500 59
+"GET / HTTP/1.1" 200 199
+"GET / HTTP/1.1" 200 208
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\python_projects\FrameworkDjango\HW\myproject\hw_3_app\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 208
+Not Found: /user
+"GET /user HTTP/1.1" 404 3095
+Not Found: /user/1
+"GET /user/1 HTTP/1.1" 404 3101
