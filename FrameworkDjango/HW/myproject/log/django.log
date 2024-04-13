@@ -106,3 +106,4 @@ Not Found: /user
 "GET /user HTTP/1.1" 404 3095
 Not Found: /user/1
 "GET /user/1 HTTP/1.1" 404 3101
+Watching for file changes with StatReloader
