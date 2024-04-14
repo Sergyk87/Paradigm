@@ -14,19 +14,19 @@ logger = logging.getLogger(__name__)
 
 def index(request):
     logger.info(f'Посещение страницы {__name__}: index')
-    return render(request, 'hw3_app/index.html')
+    return render(request, 'hw_4_app/index.html')
 
 
 def about(request):
     logger.info(f'Посещение страницы {__name__}: about')
-    return render(request, 'hw3_app/about.html')
+    return render(request, 'hw_4_app/about.html')
 
 
 def orders_by_customer_id(request, customer_id):
     customer = get_object_or_404(Customer, pk=customer_id)
     orders = Order.objects.filter(customer=customer).order_by('-pk')
     context = {'customer': customer, 'orders': orders}
-    return render(request, 'hw3_app/orders_by_customer_id.html', context)
+    return render(request, 'hw_4_app/orders_by_customer_id.html', context)
 
 
 def stats_by_customer_id(request, customer_id, scope_in_days=365):
@@ -47,7 +47,7 @@ def stats_by_customer_id(request, customer_id, scope_in_days=365):
         products.sort(key=lambda x: x.price, reverse=True)
         scope_dict[k].extend(products)
     context['scope_dict'] = scope_dict
-    return render(request, 'hw3_app/stats_by_customer_id.html', context)
+    return render(request, 'hw_4_app/stats_by_customer_id.html', context)
 
 
 def create_product(request):
@@ -69,7 +69,7 @@ def create_product(request):
     else:
         form = ProductForm()
     context = {'form': form, 'title': 'Форма создания нового товара'}
-    return render(request, 'hw4_app/create.html', context)
+    return render(request, 'hw_4_app/create.html', context)
 
 
 def update_product(request, product_id):
@@ -80,4 +80,4 @@ def update_product(request, product_id):
             form.save()
     form = ProductForm(instance=product)
     context = {'product': product, 'form': form, 'title': 'Форма обновления данных товара'}
-    return render(request, 'hw4_app/update.html', context)
+    return render(request, 'hw_4_app/update.html', context)
