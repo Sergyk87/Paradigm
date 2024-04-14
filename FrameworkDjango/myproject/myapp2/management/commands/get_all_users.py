@@ -7,4 +7,4 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         users = User.objects.all()
-        self.stdout.write(f'{users}')
+        self.stdout.write(f"{users}")
